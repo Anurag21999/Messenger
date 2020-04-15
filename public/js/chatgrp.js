@@ -3,7 +3,7 @@
 $(function(){
 
 	// getting the id of the room from the url
-	var id = Number(window.location.pathname.match(/messenger-chat-v1.herokuapp.com\/chatgrp\/(\d+)$/)[1]);
+	var id = Number(window.location.pathname.match(/\/messenger-chat-v1.herokuapp.com\/chatgrp\/(\d+)$/)[1]);
 
 	
 	// connect to the socket

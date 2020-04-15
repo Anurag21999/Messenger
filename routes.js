@@ -224,7 +224,7 @@ socket.on('userimage',function(image){
 
 function findClientsSocket(io,roomId, namespace) {
 	var res = [],
-		ns = io.of(namespace ||"/messenger-chat-v1.herokuapp.com");    // the default namespace is "/"
+		ns = io.of(namespace ||"/");    // the default namespace is "/"
 
 	if (ns) {
 		for (var id in ns.connected) {
