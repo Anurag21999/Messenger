@@ -142,7 +142,7 @@ $(function(){
 	
 var app = angular.module('myApp',['socket.io']);
 app.config(function ( $socketProvider){
-	$socketProvider.setConnectionUrl(process.env.PORT);
+	$socketProvider.setConnectionUrl(process.env.PORT||"http://localhost:8080");
 })
 
 

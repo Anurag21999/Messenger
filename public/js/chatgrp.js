@@ -95,7 +95,7 @@ socket.on('peeps',function(data){
 })
 var app = angular.module('myapp',['socket.io']);
 app.config(function ( $socketProvider){
-	$socketProvider.setConnectionUrl(process.env.PORT);
+	$socketProvider.setConnectionUrl(process.env.PORT||"http://localhost:8080");
 })
 app.controller('myctrl', function($scope,$socket) {
 	$scope.user=[]
