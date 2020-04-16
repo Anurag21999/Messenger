@@ -147,6 +147,7 @@ app.get('/chatgrp/:id',function(req,res){
 
 		// Somebody left the chat
 		socket.on('disconnect', function() {
+			delete nickname[socket.name]
 
 			// Notify the other person in the chat room
 			// that his partner has left
@@ -218,7 +219,9 @@ socket.on('userimage',function(image){
 	
 	socket.broadcast.emit('addImage',{user:image.user,onl:image.onl,img:image.img});
 })
-		
+	socket.on('disconnect',function(){
+		delete nick[socket.yname]
+	})	
 	});
 };
 
