@@ -142,8 +142,7 @@ $(function(){
 	
 var app = angular.module('myApp',['socket.io']);
 app.config(function ( $socketProvider){
-	var port=process.env.PORT||8080
-	$socketProvider.setConnectionUrl("http://localhost:"+port);
+	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com/");
 })
 
 

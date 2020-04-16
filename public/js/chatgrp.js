@@ -95,8 +95,7 @@ socket.on('peeps',function(data){
 })
 var app = angular.module('myapp',['socket.io']);
 app.config(function ( $socketProvider){
-	var port=process.env.PORT||8080
-	$socketProvider.setConnectionUrl("http://localhost:"+port);
+	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com/");
 })
 app.controller('myctrl', function($scope,$socket) {
 	$scope.user=[]
