@@ -34,10 +34,10 @@ app.get('/chatgrp/:id',function(req,res){
 	app.get('/create', function(req,res){
 
 		// Generate unique id for the room
-		var id = Math.round((Math.random() * 1000000));
+		 window.id = Math.round((Math.random() * 1000000));
 
 		// Redirect to the random room
-		res.redirect('/chat/'+id);
+		res.redirect('/chat/'+window.id);
 	});
     
 	app.get('/chat/:id', function(req,res){
@@ -65,7 +65,7 @@ app.get('/chatgrp/:id',function(req,res){
 			
 			socket_id=i[j];
 			socket_data = nickname[socket_id];
-			temp=({"pname":socket_data.name,"puser":socket_data.username,"pimg":socket_data.image})
+			temp=({"pname":socket_data.name,"puser":window.id,"pimg":socket_data.image})
 			name.push(temp)
 			}
 			console.log(name)
