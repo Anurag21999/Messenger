@@ -142,7 +142,7 @@ $(function(){
 	
 var app = angular.module('myApp',['socket.io']);
 app.config(function ( $socketProvider){
-	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com/");
+	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com");
 })
 
 
