@@ -54,7 +54,7 @@ app.get('/chatgrp/:id',function(req,res){
 		// number of people in this chat room
 		socket.on("user_name",(data)=>{
 			socket.name=data.name
-			socket.username=data.username
+			socket.yusername=data.username
 			socket.image=data.img
 			nickname[data.name]=socket
 			var name=[]
@@ -65,11 +65,10 @@ app.get('/chatgrp/:id',function(req,res){
 			
 			socket_id=i[j];
 			socket_data = nickname[socket_id];
-			temp=({"pname":socket_data.name,"puser":socket_data.username,"pimg":socket_data.image})
+			temp=({"pname":socket_data.name,"puser":socket_data.yusername,"pimg":socket_data.image})
 			name.push(temp)
 			}
 			console.log(name)
-			console.log(name.length)
 			chat.emit("recieve_username",name)
 		})
         

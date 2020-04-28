@@ -59,7 +59,6 @@ body{
 				<form class="loginForm">
 					<input type="text" id="yourName" placeholder="Your nick name" /><br/>
 					<input type="text" id="yourEmail" placeholder="Your email" /><br/>
-					<input type="text" id="yourSocket" placeholder="Number in the link" /><br/>
 					<input type="submit" id="yourEnter" value="ENTER" />
 				</form>
 
@@ -97,9 +96,9 @@ body{
 			<h5>Chat with your friend by clicking name of people you know</h5>
 
 			
-					<!-- <div ng-app="myApp" ng-controller="myCtrl"> -->
+					<div ng-app="myApp" ng-controller="myCtrl">
                        <a ng-repeat="x in users" href="{{ x.puser }}" id="link"><li>{{ x.pname }}</li></a>
-					<!-- </div> -->
+					</div>
 							
 			
 			

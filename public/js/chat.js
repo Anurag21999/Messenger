@@ -45,7 +45,7 @@ $(function(){
 		userlist = $("#userlist");
 		yourEnter=$("#yourEnter");
 		images=$('#images');
-		yourSocket=$('#yourSocket');
+		
 		var imgChunks=[];
 		
 
@@ -144,7 +144,7 @@ $(function(){
 	
 var app = angular.module('myApp',['socket.io']);
 app.config(function ( $socketProvider){
-	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com");
+	$socketProvider.setConnectionUrl("https://messenger-chat-v1.herokuapp.com/");
 })
 
 
@@ -152,8 +152,8 @@ app.controller('myCtrl', function($scope,$socket) {
 	$scope.users=[];
 	yourEnter.click(()=>{
 	$socket.emit("user_name",{
-		name :$.trim(yourName.val()),
-		username:yourSocket.val(),
+		name :yourName.val(),
+		username:window.location.href,
 		img:window.avatar 	
 		})
 		})
