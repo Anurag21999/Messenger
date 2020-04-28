@@ -56,7 +56,7 @@ app.get('/chatgrp/:id',function(req,res){
 			socket.name=data.name
 			socket.username=data.username
 			socket.image=data.img
-			nickname[data.name]=socket
+			nickname[data.username]=socket
 			var name=[]
 			i = Object.keys(nickname);
 			
