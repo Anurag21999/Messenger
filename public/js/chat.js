@@ -151,7 +151,7 @@ app.controller('myCtrl', function($scope,$socket) {
 	yourEnter.click(()=>{
 	$socket.emit("user_name",{
 		name :$.trim(yourName.val()),
-		username:window.location.href,
+		username:yourEmail.val(),
 		img:window.avatar 	
 		})
 		})
