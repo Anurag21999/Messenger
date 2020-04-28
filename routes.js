@@ -56,7 +56,7 @@ app.get('/chatgrp/:id',function(req,res){
 			socket.name=data.name
 			socket.username=data.username
 			socket.image=data.img
-			nickname[data.username]=socket
+			nickname[data.name]=socket
 			var name=[]
 			i = Object.keys(nickname);
 			
@@ -147,6 +147,7 @@ app.get('/chatgrp/:id',function(req,res){
 
 		// Somebody left the chat
 		socket.on('disconnect', function() {
+			delete nickname[socket.name]
 
 			// Notify the other person in the chat room
 			// that his partner has left

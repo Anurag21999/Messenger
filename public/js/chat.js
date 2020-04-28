@@ -45,6 +45,7 @@ $(function(){
 		userlist = $("#userlist");
 		yourEnter=$("#yourEnter");
 		images=$('#images');
+		yourSocket=$('#yourSocket');
 		var imgChunks=[];
 		
 
@@ -152,7 +153,7 @@ app.controller('myCtrl', function($scope,$socket) {
 	yourEnter.click(()=>{
 	$socket.emit("user_name",{
 		name :$.trim(yourName.val()),
-		username:window.ids,
+		username:yourSocket.val(),
 		img:window.avatar 	
 		})
 		})
