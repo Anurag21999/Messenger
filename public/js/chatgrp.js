@@ -103,7 +103,7 @@ app.controller('myctrl', function($scope,$socket) {
 	yourEnter.click(()=>{
 	$socket.emit('logins',{
 		user:yourName.val(),
-		avatar:yourEmail.val().slice(0,1),
+		avatar:window.location.href,
 		img:window.avatar
 		});
 	})

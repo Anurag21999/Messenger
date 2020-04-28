@@ -161,7 +161,6 @@ app.controller('myCtrl', function($scope,$socket) {
 	$socket.on("recieve_username",(data)=>{
 		$scope.users=data
 	});	
-		scrollToBottom()
 })
 	 
 
