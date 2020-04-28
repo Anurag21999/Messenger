@@ -7,6 +7,7 @@ $(function(){
 	// getting the id of the room from the url
 	var id = Number(window.location.pathname.match(/\/chat\/(\d+)$/)[1]);
 	window.avatar="../img/unnamed.jpg"
+	window.ids=window.location.href;
 	// connect to the socket
 	var socket = io();
 	
@@ -151,7 +152,7 @@ app.controller('myCtrl', function($scope,$socket) {
 	yourEnter.click(()=>{
 	$socket.emit("user_name",{
 		name :$.trim(yourName.val()),
-		username:yourEmail.val(),
+		username:window.ids,
 		img:window.avatar 	
 		})
 		})
